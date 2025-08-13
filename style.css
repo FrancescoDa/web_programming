@@ -8,6 +8,10 @@ body {
     background-color: gray;
 }
 
+html {
+    overflow-y: scroll; /* Scrollbar vertikal selalu muncul */
+}
+
 header.header {
     height: 110px;
     background-color: white;
@@ -29,6 +33,11 @@ header.header {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 600;
     padding: 10px;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
 }
 
 .menu a:hover {
@@ -48,6 +57,66 @@ header.header {
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
 }
+
+.dm-image {
+    width: 100%;
+    height: calc(100vh);
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), /* lapisan gelap */
+        url('img/dm-halaman.jpg'); /* gambar */
+    background-size: cover;
+    background-position: center;
+}
+
+.image-text {
+    width: 500px;
+    height: 100px;
+    top: 400px;
+    position: absolute;
+    left: 200px;
+    color: white;
+}
+
+.title-dm {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 800px;
+
+}
+
+.deskripsi-dm {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 500px;
+    font-size: 20px;
+    margin-top: 40px;
+}
+
+.footer {
+    background-color: white;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+
+.social-icons {
+    margin-top: 20px;
+    font-size: 17px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: black;
+}
+
+
 
 
 
