@@ -20,5 +20,9 @@ int main() {
     cout << "\n=== Hasil Perhitungan ===\n";
     cout << "Sisi miring: " << miring << endl;
     cout << "Luas segitiga: " << luas << endl;
-    cout << "Keliling segitiga: " << keliling << endl;
+    cout << "Keliling segitiga: " << keliling;
+
+    cin.ignore();
+    cin.get();
+
 }

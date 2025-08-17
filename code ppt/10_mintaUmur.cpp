@@ -12,6 +12,8 @@ int main() {
             cout << "Umur anda diterima" << endl;
             break;
         }
-
     }
+
+    cin.ignore();
+    cin.get();
 }

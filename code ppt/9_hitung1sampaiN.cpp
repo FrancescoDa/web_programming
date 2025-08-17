@@ -15,4 +15,7 @@ int main() {
     }
 
     cout << jumlah << endl;
+
+    cin.ignore();
+    cin.get();
 }

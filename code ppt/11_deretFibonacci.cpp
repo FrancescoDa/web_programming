@@ -20,6 +20,8 @@ int main() {
         } else {
             cout << ", ";
         }
-        
     }
+
+    cin.ignore();
+    cin.get();
 }

@@ -26,4 +26,7 @@ int main() {
 
     cout << "Biaya parkir selama " << lamaParkir << " jam = " << biaya << " Rupiah";
     // cout << biaya << message << endl;
+
+    cin.ignore();
+    cin.get();
 }

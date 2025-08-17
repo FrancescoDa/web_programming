@@ -14,4 +14,7 @@ int main() {
     } else {
         cout << bilangan << "adalah bilangan GANJIL";
     }
+    
+    cin.ignore();
+    cin.get();
 }

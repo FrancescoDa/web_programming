@@ -18,4 +18,6 @@ int main() {
     cout << "\n=== Hasil Konversi ===\n";
     cout << jam << ":" << menit << ":" << detik;
 
+    cin.ignore();
+    cin.get();
 }
