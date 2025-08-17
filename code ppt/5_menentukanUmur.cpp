@@ -19,6 +19,4 @@ int main() {
         cout << "Dewasa" << endl;
     }
 
-    cin.ignore();
-    cin.get();
 }

@@ -19,7 +19,7 @@ int main() {
     } else {
         biaya = 5000 + ((lamaParkir - 2) * 3000);
     } 
-
+    
     if (biaya > 20000) {
         biaya = 20000;
     }
@@ -27,6 +27,4 @@ int main() {
     cout << "Biaya parkir selama " << lamaParkir << " jam = " << biaya << " Rupiah";
     // cout << biaya << message << endl;
 
-    cin.ignore();
-    cin.get();
 }

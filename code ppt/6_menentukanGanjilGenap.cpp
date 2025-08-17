@@ -1,4 +1,4 @@
-// MENENTUKAN KATEGORI UMUR
+// MENENTUKAN BILANGAN GANJIL ATAU GENAP
 
 #include <iostream>
 using namespace std;
@@ -14,7 +14,5 @@ int main() {
     } else {
         cout << bilangan << "adalah bilangan GANJIL";
     }
-    
-    cin.ignore();
-    cin.get();
+
 }

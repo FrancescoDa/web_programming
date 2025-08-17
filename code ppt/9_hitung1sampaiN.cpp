@@ -1,3 +1,5 @@
+//Menghitung 1 + 2 + 3 + ... + N
+
 #include <iostream>
 using namespace std;
 
@@ -16,6 +18,4 @@ int main() {
 
     cout << jumlah << endl;
 
-    cin.ignore();
-    cin.get();
 }

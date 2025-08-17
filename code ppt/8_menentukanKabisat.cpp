@@ -22,6 +22,4 @@ int main() {
 
     cout << "Tahun " << tahun << " " << message;
 
-    cin.ignore();
-    cin.get();
 }

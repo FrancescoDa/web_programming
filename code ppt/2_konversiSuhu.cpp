@@ -18,6 +18,4 @@ int main() {
     cout << fahrenheit << "°F = ";
     cout << kelvin << "°K";
 
-    cin.ignore();
-    cin.get();
 }

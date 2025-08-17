@@ -17,6 +17,4 @@ int main() {
     cout << jumlahLembar << " lembar" << endl;
     cout << "Sisa " << sisaUang << " Rupiah" << endl;
 
-    cin.ignore();
-    cin.get();
 }

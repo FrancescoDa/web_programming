@@ -22,7 +22,4 @@ int main() {
     cout << "Luas segitiga: " << luas << endl;
     cout << "Keliling segitiga: " << keliling;
 
-    cin.ignore();
-    cin.get();
-
 }
