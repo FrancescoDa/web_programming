@@ -9,49 +9,215 @@
     <!-- CDN BOOTSTRAP 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Link ke Bootstrap Icons (Untuk ikon Visi & Misi) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="style-visi-misi.css">
+    <style>
+        /* AREA NAVBAR */
+        .custom-hover-success:hover {
+            color: #198754 !important;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .custom-weight {
+                font-size: 0.8rem;
+            }
+        }
+
+        /* AREA CAROUSEL */
+        .carousel-img-fixed {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        /* Untuk Tablet (layar dengan lebar 768px atau lebih) */
+        @media (max-width: 768px) {
+            .carousel-img-fixed {
+                height: 300px;
+            }
+        }
+
+        /* Untuk Desktop (layar dengan lebar 992px atau lebih) */
+        @media (min-width: 992px) {
+            .carousel-img-fixed {
+                height: 500px;
+            }
+        }
+
+        /* AREA CONTENT */
+        .card-img-fixed {
+            height: 120px;
+            object-fit: cover;
+        }
+    </style>
 </head>
 
-<body>
+<div>
     <!-- 
     navbar : merupakan kelas yang dapat digunakan untuk membuat navigasi bar
     navbar-expand-lg : untuk mengatur navbar agar dapat diperluas pada layar besar
     navbar-light : untuk memberikan tema warna terang pada navbar
     bg-light : untuk memberikan latar belakang terang pada navbar
+    sticky-top : untuk membuat navbar tetap di atas saat di-scroll
     -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
         <!-- container-fluid : untuk membuat kontainer yang mengisi seluruh lebar layar -->
-        <div class="container-fluid">
+        <div class="container-fluid" style="max-width: 80%; margin:auto;">
             <!-- navbar-brand : untuk menampilkan nama atau logo dari website -->
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand d-flex align-items-center" href="home.html">
+                <img src="public/img/logo-dm.png" alt="Logo Dharma Mulya" width="50" height="50" class="me-2">
+                <p class="fw-bold mb-0 custom-weight">DHARMA MULYA CHRISTIAN SCHOOL</p>
+            </a>
             <!-- navbar-toggler : untuk membuat tombol yang dapat digunakan untuk mengubah tampilan navbar pada layar kecil (humberger menu)-->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <!-- collapse navbar-collapse : untuk mengatur elemen-elemen di dalam navbar agar dapat disembunyikan pada layar kecil -->
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <!-- navbar-nav : untuk membuat daftar navigasi di dalam navbar -->
-                <ul class="navbar-nav">
+                <ul class="navbar-nav gap-2">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active custom-hover-success fw-bold" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
+                        <a class="nav-link active custom-hover-success fw-bold" href="#">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
+                        <a class="nav-link active custom-hover-success fw-bold" href="#">Facility</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        <a class="nav-link active custom-hover-success fw-bold" href="#">Register</a>
                     </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Register</a>
+                    </li> -->
                 </ul>
             </div>
         </div>
     </nav>
 
+
+    <!-- AREA JOMBOTRON / CAROUSEL -->
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="public/img/slide_01.png" class="d-block w-100 carousel-img-fixed" alt="banner statement">
+            </div>
+            <div class="carousel-item">
+                <img src="public/img/slide_02.png" class="d-block w-100 carousel-img-fixed" alt="banner activity">
+            </div>
+            <div class="carousel-item">
+                <img src="public/img/slide_03.jpeg" class="d-block w-100 carousel-img-fixed" alt="banner achievement">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- END CAROUSEL -->
+
+
+    <!-- AREA CARD -->
+    <div class="container mt-4 pt-4" style="max-width: 80%;">
+        <div class="d-flex justify-content-center row g-3">
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="card h-100">
+                    <img src="public/img/elements/playgroup.png" class="card-img-top card-img-fixed" alt="playgroup">
+                    <div class="card-body">
+                        <p class="card-text fw-bold">PLAYGROUP + KINDERGARDEN</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="card h-100">
+                    <img src="public/img/elements/elementary.png" class="card-img-top card-img-fixed" alt="elementary">
+                    <div class="card-body">
+                        <p class="card-text fw-bold">ELEMENTARY SCHOOL</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="card h-100">
+                    <img src="public/img/elements/junior_high.png" class="card-img-top card-img-fixed"
+                        alt="junior high">
+                    <div class="card-body">
+                        <p class="card-text fw-bold">JUNIOR HIGH SCHOOL</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="card h-100">
+                    <img src="public/img/elements/senior_high.png" class="card-img-top card-img-fixed"
+                        alt="senior high">
+                    <div class="card-body">
+                        <p class="card-text fw-bold">SENIOR HIGH SCHOOL</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="card h-100">
+                    <img src="public/img/elements/parents.png" class="card-img-top card-img-fixed" alt="parents">
+                    <div class="card-body">
+                        <p class="card-text fw-bold">PARENTS</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END CARD -->
+
+
+    <!-- CONTENT VISI & MISI -->
+    <div class="container py-5" style="max-width: 80%;">
+        <div class="row g-4 align-items-stretch">
+
+            <!-- Kolom Visi -->
+            <div class="col-lg-6">
+                <div class="info-card">
+                    <div class="card-header-custom">
+                        <i class="bi bi-bullseye icon-visi"></i>
+                        <h3>Visi</h3>
+                    </div>
+                    <p class="card-text-custom">
+                        Membangun peserta didik yang takut akan Tuhan, berkarakter, berpengetahuan, berketerampilan dan cinta lingkungan sehingga bertumbuh menjadi generasi yang mandiri, aktif, nasionalis, disiplin, rendah hati, dan inspiratif.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Kolom Misi -->
+            <div class="col-lg-6">
+                <div class="info-card">
+                    <div class="card-header-custom">
+                        <i class="bi bi-check2-square icon-misi"></i>
+                        <h3>Misi</h3>
+                    </div>
+                    <ul class="misi-list">
+                        <li>Menumbuhkan penghayatan dan pengalaman firman mengasihi Tuhan dan sesama manusia seperti diri sendiri serta berbudi pekerti luhur dalam kehidupan sehari-hari.</li>
+                        <li>Membantu peserta didik untuk "menjadi dirinya sendiri", mengenal potensinya dan memotivasi diri untuk berkembang secara maksimal.</li>
+                        <li>Melaksanakan pembelajaran yang variatif sesuai dengan gaya belajar peserta didik secara efektif sehingga setiap peserta didik berkembang maksimal sesuai dengan kemampuannya.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- END CONTENT VISI & MISI -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
-</body>
+    </body>
 
 </html>

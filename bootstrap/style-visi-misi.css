@@ -1,0 +1,65 @@
+/* Styling untuk kartu Visi & Misi */
+.info-card {
+    background-color: #FFFBEB; /* Warna kuning krem yang lembut */
+    border: 1px solid #FCD34D; /* Border warna kuning emas */
+    border-radius: 1rem;       /* Membuat sudut sangat melengkung (16px) */
+    padding: 2rem;             /* Jarak dari border ke konten di dalam (32px) */
+    height: 100%;              /* PENTING: Membuat kedua kartu memiliki tinggi yang sama */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Bayangan lembut (opsional) */
+}
+
+/* Styling untuk header (ikon + judul) */
+.card-header-custom {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem; /* Jarak antara ikon dan judul */
+    margin-bottom: 1.5rem; /* Jarak dari header ke teks di bawahnya */
+}
+
+/* Styling untuk judul H3 */
+.card-header-custom h3 {
+    font-size: 1.5rem; /* Ukuran font judul */
+    font-weight: bold;
+    color: #111827; /* Warna abu-abu sangat gelap */
+    margin: 0; /* Hapus margin default dari h3 */
+}
+
+/* Styling untuk ikon */
+.icon-visi, .icon-misi {
+    font-size: 2rem; /* Ukuran ikon (32px) */
+    color: #FBBF24; /* Warna kuning emas yang sedikit lebih tua */
+}
+
+/* Styling untuk teks paragraf di Visi */
+.card-text-custom {
+    color: #4B5563; /* Warna abu-abu gelap untuk teks */
+    line-height: 1.6; /* Jarak antar baris agar mudah dibaca */
+}
+
+/* Styling untuk daftar Misi */
+.misi-list {
+    list-style: none; /* Hapus bullet point default */
+    padding-left: 0;  /* Hapus padding default dari <ul> */
+    margin-bottom: 0; /* Hapus margin bawah dari <ul> */
+}
+
+.misi-list li {
+    color: #4B5563; /* Warna yang sama dengan teks paragraf */
+    line-height: 1.6;
+    padding-left: 2rem; /* Beri ruang di kiri untuk custom bullet */
+    position: relative; /* Diperlukan untuk posisi custom bullet */
+    margin-bottom: 0.75rem; /* Jarak antar item misi */
+}
+
+/* Membuat custom bullet point (lingkaran kuning) */
+.misi-list li::before {
+    content: ''; /* Wajib ada untuk pseudo-element */
+    position: absolute;
+    left: 0;
+    top: 9px; /* Sesuaikan posisi vertikal agar sejajar dengan teks */
+
+    width: 12px;
+    height: 12px;
+    border: 2px solid #FCD34D; /* Border kuning emas */
+    border-radius: 50%; /* Membuatnya menjadi lingkaran */
+}
