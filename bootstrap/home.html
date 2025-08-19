@@ -14,19 +14,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
     <link rel="stylesheet" href="style-visi-misi.css">
+    <link rel="stylesheet" href="style-header-footer.css">
     <style>
-        /* AREA NAVBAR */
-        .custom-hover-success:hover {
-            color: #198754 !important;
-            font-weight: bold;
-        }
-
-        @media (max-width: 768px) {
-            .custom-weight {
-                font-size: 0.8rem;
-            }
-        }
-
         /* AREA CAROUSEL */
         .carousel-img-fixed {
             width: 100%;
@@ -44,13 +33,19 @@
         /* Untuk Desktop (layar dengan lebar 992px atau lebih) */
         @media (min-width: 992px) {
             .carousel-img-fixed {
-                height: 500px;
+                height: 600px;
             }
         }
 
         /* AREA CONTENT */
         .card-img-fixed {
             height: 120px;
+            object-fit: cover;
+        }
+
+        /* AREA ACTIVITY */
+        .card-img-activity {
+            height: 180px;
             object-fit: cover;
         }
     </style>
@@ -82,16 +77,16 @@
                 <!-- navbar-nav : untuk membuat daftar navigasi di dalam navbar -->
                 <ul class="navbar-nav gap-2">
                     <li class="nav-item">
-                        <a class="nav-link active custom-hover-success fw-bold" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active custom-hover-success fw-bold" href="home.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active custom-hover-success fw-bold" href="#">About</a>
+                        <a class="nav-link custom-hover-success fw-bold" href="about.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active custom-hover-success fw-bold" href="#">Facility</a>
+                        <a class="nav-link custom-hover-success fw-bold" href="#">Facility</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active custom-hover-success fw-bold" href="#">Register</a>
+                        <a class="nav-link custom-hover-success fw-bold" href="#">Register</a>
                     </li>
                     <!-- <li class="nav-item">
                         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Register</a>
@@ -191,7 +186,9 @@
                         <h3>Visi</h3>
                     </div>
                     <p class="card-text-custom">
-                        Membangun peserta didik yang takut akan Tuhan, berkarakter, berpengetahuan, berketerampilan dan cinta lingkungan sehingga bertumbuh menjadi generasi yang mandiri, aktif, nasionalis, disiplin, rendah hati, dan inspiratif.
+                        Membangun peserta didik yang takut akan Tuhan, berkarakter, berpengetahuan, berketerampilan dan
+                        cinta lingkungan sehingga bertumbuh menjadi generasi yang mandiri, aktif, nasionalis, disiplin,
+                        rendah hati, dan inspiratif.
                     </p>
                 </div>
             </div>
@@ -204,9 +201,12 @@
                         <h3>Misi</h3>
                     </div>
                     <ul class="misi-list">
-                        <li>Menumbuhkan penghayatan dan pengalaman firman mengasihi Tuhan dan sesama manusia seperti diri sendiri serta berbudi pekerti luhur dalam kehidupan sehari-hari.</li>
-                        <li>Membantu peserta didik untuk "menjadi dirinya sendiri", mengenal potensinya dan memotivasi diri untuk berkembang secara maksimal.</li>
-                        <li>Melaksanakan pembelajaran yang variatif sesuai dengan gaya belajar peserta didik secara efektif sehingga setiap peserta didik berkembang maksimal sesuai dengan kemampuannya.</li>
+                        <li>Menumbuhkan penghayatan dan pengalaman firman mengasihi Tuhan dan sesama manusia seperti
+                            diri sendiri serta berbudi pekerti luhur dalam kehidupan sehari-hari.</li>
+                        <li>Membantu peserta didik untuk "menjadi dirinya sendiri", mengenal potensinya dan memotivasi
+                            diri untuk berkembang secara maksimal.</li>
+                        <li>Melaksanakan pembelajaran yang variatif sesuai dengan gaya belajar peserta didik secara
+                            efektif sehingga setiap peserta didik berkembang maksimal sesuai dengan kemampuannya.</li>
                     </ul>
                 </div>
             </div>
@@ -214,6 +214,152 @@
         </div>
     </div>
     <!-- END CONTENT VISI & MISI -->
+
+
+    <!-- CONTENT VIDEO DHARMA MULYA -->
+    <div class="container py-5" style="max-width: 80%;">
+        <h2 class="text-center mb-4">Video Dharma Mulya</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="ratio ratio-16x9 rounded overflow-hidden">
+                    <iframe src="https://www.youtube.com/embed/Qz0eKKuA5Uc?si=Gu-_F7RD9WRPmB74" title="YouTube video"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END CONTENT VIDEO DHARMA MULYA -->
+
+
+    <!-- CONTENT ACTIVITY DHARMA MULYA -->
+    <div class="container py-5" style="max-width: 80%;">
+        <h2 class="text-center mb-4">Activity Dharma Mulya</h2>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <img src="public/img/activity/activity_01.png" class="card-img-top card-img-activity"
+                        alt="activity 1">
+                    <div class="card-body">
+                        <h5 class="card-title pb-2">Pembelajaran Berdiferensiasi</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus animi
+                            ullam laboriosam dolorum voluptate commodi aut cum magnam ad neque?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <img src="public/img/activity/activity_02.png" class="card-img-top card-img-activity"
+                        alt="activity 2">
+                    <div class="card-body">
+                        <h5 class="card-title pb-2">Sambut Pelajar Internasional</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus animi
+                            ullam laboriosam dolorum voluptate commodi aut cum magnam ad neque?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <img src="public/img/activity/activity_03.png" class="card-img-top card-img-activity"
+                        alt="activity 3">
+                    <div class="card-body">
+                        <h5 class="card-title pb-2">Perayaan World Creativity & Innovation Day</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus animi
+                            ullam laboriosam dolorum voluptate commodi aut cum magnam ad neque?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <img src="public/img/activity/activity_04.png" class="card-img-top card-img-activity"
+                        alt="activity 4">
+                    <div class="card-body">
+                        <h5 class="card-title pb-2">Juara Lomba Penelitian Belia</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus animi
+                            ullam laboriosam dolorum voluptate commodi aut cum magnam ad neque?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <img src="public/img/activity/activity_05.png" class="card-img-top card-img-activity"
+                        alt="activity 5">
+                    <div class="card-body">
+                        <h5 class="card-title pb-2">Haru! Melodi Rindu untuk Guruku</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus animi
+                            ullam laboriosam dolorum voluptate commodi aut cum magnam ad neque?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <img src="public/img/activity/activity_06.png" class="card-img-top card-img-activity"
+                        alt="activity 6">
+                    <div class="card-body">
+                        <h5 class="card-title pb-2">Perayaan Hari Guru Nasional</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus animi
+                            ullam laboriosam dolorum voluptate commodi aut cum magnam ad neque?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END CONTENT ACTIVITY DHARMA MULYA -->
+
+
+    <!-- AREA MAP DHARMA MULYA -->
+    <div id="map" class="my-4 ratio ratio-21x9">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.492063141004!2d112.70694907586984!3d-7.277941892728998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fc08e861fd3d%3A0xa2db32ddb611176c!2sJl.%20Raya%20Dukuh%20Kupang%20Barat%20No.50%2C%20Dukuh%20Kupang%2C%20Kec.%20Dukuhpakis%2C%20Surabaya%2C%20Jawa%20Timur%2060225!5e0!3m2!1sid!2sid!4v1692261234567!5m2!1sid!2sid"
+            allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <!-- END AREA MAP DHARMA MULYA -->
+
+
+    <!-- AREA FOOTER -->
+    <footer class="site-footer">
+        <div class="container" style="max-width: 80%;">
+            <div class="row">
+
+                <!-- Kolom Kiri: Informasi Pendaftaran -->
+                <div class="col-lg-6 col-md-12 mb-4 mb-lg-0 footer-info">
+                    <h5>STUDENT ENROLLMENT</h5>
+                    <p>
+                        <a href="home.html" class="footer-info-link">Click here for more information</a>
+                    </p>
+                    <p class="mt-4">
+                        info@dm.sch.id
+                    </p>
+                    <p>
+                        <i class="bi bi-whatsapp me-2"></i>082257257022
+                    </p>
+                </div>
+
+                <!-- Kolom Kanan: Ikon Sosial Media -->
+                <div class="col-lg-6 col-md-12 text-lg-end footer-social-icons">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item">
+                            <a href="#"><i class="bi bi-facebook"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#"><i class="bi bi-instagram"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#"><i class="bi bi-twitter"></i></a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Baris Bawah: Copyright -->
+            <div class="row">
+                <div class="col-12 text-start footer-copyright">
+                    © 2025 Dharma Mulya Christian School. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- END AREA FOOTER -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
