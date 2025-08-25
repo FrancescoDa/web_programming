@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REGISTER - DHARMA MULYA</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
     <div class="container">
@@ -19,13 +20,63 @@
                 <a href="home.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="facility.html">Facility</a>
+                <a href="activity.html">Activity</a>
                 <a class="active" href="register.html">Register</a>
             </div>
         </header>
 
         <!-- content -->
+        <section class="register" id="register">
+            <h1 style="font-size: 3rem;">Account <span style="color: aqua;">Registration</span></h1>
+            <div class="register-page">
+                <form action="#">
+                    <div class="input-page">
+                        <input type="text" name="nama" id="nama" class="input" placeholder="Nama Lengkap" size="30"
+                            required>
+                        <input type="text" name="alamat" id="alamat" class="input" placeholder="Alamat" size="30"
+                            required>
+                        <input type="tel" name="number" id="number" class="input" placeholder="Nomor Telpon" size="30"
+                            required>
+                        <input type="email" name="email" id="email" class="input" placeholder="Email" size="30"
+                            required>
+                        <input type="password" name="password id=" password class="input" placeholder="Password"
+                            required>
+                        <br>
+                        <table>
+                            <tr>
+                                <td><label for="jenis_kelamin">Jenis Kelamin:</label></td>
+                                <td>
+                                    <input type="radio" id="pria" name="jenis_kelamin" value="Pria" required>
+                                    <label for="pria">Pria</label>
+                                    <br>
+                                    <input type="radio" id="wanita" name="jenis_kelamin" value="Wanita" required>
+                                    <label for="wanita">Wanita</label>
+                                </td>
+                            </tr>
+                        </table>
+                        <br>
+                        <input type="submit" name="submit" id="submit" class="submit">
+                    </div>
+                </form>
+            </div>
+        </section>
+        
 
         <!-- footer -->
+        <footer class="footer">
+            <p>&copy; 2023 Dharma Mulya. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://www.youtube.com/@DharmaMulya/videos">
+                    <i class="fa-brands fa-youtube"></i> YouTube
+                </a>
+                <a href="https://www.instagram.com/dharmamulya/">
+                    <i class="fa-brands fa-instagram"></i> Instagram
+                </a>
+                <a href="https://www.facebook.com/DharmaMulyaSby/">
+                    <i class="fa-brands fa-facebook"></i> FaceBook
+                </a>
+            </div>
+        </footer>
     </div>
     
 </body>

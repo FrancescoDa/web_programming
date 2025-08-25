@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: gray;
+}
+
+html {
+    overflow-y: scroll; /* Scrollbar vertikal selalu muncul */
+}
+
+header.header {
+    height: 110px;
+    background-color: white;
+    display: flex; /* Flexbox untuk tata letak */
+    justify-content: space-between; /* Rata kiri-kanan */
+    align-items: center;
+    padding: 40px; /* Jarak dalam header */
+    width: 100%;
+}
+
+.menu {
+    display: flex; /* Flexbox untuk menu, harus ada ini klo mau ada gap */
+    gap: 40px; /* Jarak antar menu */
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.menu a:hover { /* efek ketika kursor mendekat */
+    background-color: aqua;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.menu a.active {
+    background-color: aqua;
+    border-radius: 10px; /* efek ketika menu aktif agak membulat */
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.footer {
+    background-color: white;
+    height: 200px;
+    display: flex;
+    flex-direction: column; /* agar ngelist ke bawah */
+    justify-content: center; /* rata tengah */
+    align-items: center; /* rata tengah */
+    width: 100%;
+}
+
+.content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 90px; /* jarak antar elemen di dalamnya */
+}
+
+.fasilitas-1 {
+    width: 100%;
+    height: 350px;
+    margin-top: 50px;
+}
+
+.fasilitas {
+    width: 25%;
+    height: auto;
+}
+
+.social-icons {
+    margin-top: 20px;
+    font-size: 17px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.social-icons a { 
+    text-decoration: none;
+    color: black;
+}
+
+.social-icons a:hover { 
+    color: red;
+}

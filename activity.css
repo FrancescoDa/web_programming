@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: gray;
+}
+
+html {
+    overflow-y: scroll; /* Scrollbar vertikal selalu muncul */
+}
+
+header.header {
+    height: 110px;
+    background-color: white;
+    display: flex; /* Flexbox untuk tata letak */
+    justify-content: space-between; /* Rata kiri-kanan */
+    align-items: center;
+    padding: 40px; /* Jarak dalam header */
+    width: 100%;
+}
+
+.menu {
+    display: flex; /* Flexbox untuk menu, harus ada ini klo mau ada gap */
+    gap: 40px; /* Jarak antar menu */
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.menu a:hover { /* efek ketika kursor mendekat */
+    background-color: aqua;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.menu a.active {
+    background-color: aqua;
+    border-radius: 10px; /* efek ketika menu aktif agak membulat */
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.footer {
+    background-color: white;
+    height: 200px;
+    display: flex;
+    flex-direction: column; /* agar ngelist ke bawah */
+    justify-content: center; /* rata tengah */
+    align-items: center; /* rata tengah */
+    width: 100%;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.image-grid {
+    padding: 20px;
+    width: 70%;
+    display: grid;
+    grid-gap: 20px;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 300px;
+    grid-template-areas:
+        "satu satu satu enam"
+        "dua empat empat enam"
+        "dua tiga lima tujuh"
+        "delapan delapan delapan tujuh";
+}
+
+#satu   { grid-area: satu; }
+#dua    { grid-area: dua; }
+#tiga   { grid-area: tiga; }
+#empat  { grid-area: empat; }
+#lima   { grid-area: lima; }
+#enam   { grid-area: enam; }
+#tujuh  { grid-area: tujuh; }
+#delapan { grid-area: delapan; }
+
+.image-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    border: 2px solid aqua; /* garis tepi */
+}
+
+.image-grid > div {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.social-icons {
+    margin-top: 20px;
+    font-size: 17px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.social-icons a { 
+    text-decoration: none;
+    color: black;
+}
+
+.social-icons a:hover { 
+    color: red;
+}

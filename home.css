@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: gray;
+}
+
+html {
+    overflow-y: scroll; /* Scrollbar vertikal selalu muncul */
+}
+
+header.header {
+    height: 110px;
+    background-color: white;
+    display: flex; /* Flexbox untuk tata letak */
+    justify-content: space-between; /* Rata kiri-kanan */
+    align-items: center;
+    padding: 40px; /* Jarak dalam header */
+    width: 100%;
+}
+
+.menu {
+    display: flex; /* Flexbox untuk menu, harus ada ini klo mau ada gap */
+    gap: 40px; /* Jarak antar menu */
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.menu a:hover { /* efek ketika kursor mendekat */
+    background-color: aqua;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.menu a.active {
+    background-color: aqua;
+    border-radius: 10px; /* efek ketika menu aktif agak membulat */
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.dm-image {
+    width: 100%;
+    height: 100vh;
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), /* lapisan gelap */
+        url('img/dm-halaman.jpg'); /* gambar */
+    background-size: cover; /* menutupi seluruh area */
+    background-position: center; /* posisi gambar di tengah */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-lingkaran {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid white;
+    opacity: 0.5;
+    transition: opacity 0.5s ease;
+}
+
+
+
+
+.image-lingkaran:hover{
+    opacity: 1; /* transparansi hilang saat hover */
+    border: 5px solid aqua;
+}
+
+.isi-gambar {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 230px; /* jarak antar elemen di dalamnya */
+}
+
+.image-text {
+    width: 700px;
+    height: 300px;
+    color: white;
+}
+
+.title-dm {
+    font-family: Verdana, Geneva, Tahoma, sans-serif; /* font untuk judul */
+
+}
+
+.deskripsi-dm {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+.footer {
+    background-color: white;
+    height: 200px;
+    display: flex;
+    flex-direction: column; /* agar ngelist ke bawah */
+    justify-content: center; /* rata tengah */
+    align-items: center; /* rata tengah */
+    width: 100%;
+}
+
+
+.social-icons {
+    margin-top: 20px;
+    font-size: 17px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.social-icons a { 
+    text-decoration: none;
+    color: black;
+}
+
+.social-icons a:hover { 
+    color: red;
+}
+

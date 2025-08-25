@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: gray;
+    background-color: rgb(233, 233, 233);
 }
 
 html {
@@ -54,37 +54,33 @@ header.header {
     -o-border-radius: 10px;
 }
 
-.dm-image {
+.content {
+    padding: 30px;
+}
+
+.jadwal {
     width: 100%;
-    height: 100vh;
-    background-image: 
-        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), /* lapisan gelap */
-        url('img/dm-halaman.jpg'); /* gambar */
-    background-size: cover; /* menutupi seluruh area */
-    background-position: center; /* posisi gambar di tengah */
+    border-collapse: collapse;
+    background-color: white;
 }
 
-.image-text {
-    width: 500px;
-    height: 100px;
-    top: 300px;
-    position: relative; /* posisi relatif untuk mengatur posisi teks */
-    left: 200px;
-    color: white;
+.jadwal th,
+.jadwal td {
+    border: 5px solid black;
+    padding: 10px;
+    text-align: center;
 }
 
-.title-dm {
-    font-family: Verdana, Geneva, Tahoma, sans-serif; /* font untuk judul */
-    width: 800px;
-
+.jadwal th {
+    background-color: aqua;
 }
 
-.deskripsi-dm {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    width: 500px;
-    font-size: 20px;
-    margin-top: 40px;
+.istirahat {
+    text-align: center;
+    font-weight: bold;
+    background-color: gray;
 }
+
 
 .footer {
     background-color: white;
@@ -110,7 +106,6 @@ header.header {
     color: black;
 }
 
-
-
-
-
+.social-icons a:hover { 
+    color: red;
+}
