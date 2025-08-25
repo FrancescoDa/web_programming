@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrasi - Dharma Mulya</title>
+
+    <!-- CDN BOOTSTRAP 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Link ke Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style-header-footer.css">
+
+    <!-- CSS Custom -->
+    <style>
+        /* Variabel Warna sesuai desain */
+        :root {
+            --dm-dark-blue: #1A335A;
+            --dm-blue: #293B8E;
+            --dm-yellow: #FFDD57;
+            --dm-text-light: #ffffff;
+            --dm-text-dark: #343a40;
+            --dm-red: #EF4B4B;
+            --dm-light-yellow: #E0E37F;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f7f6;
+        }
+
+        /* --- Hero Banner Section --- */
+        .hero-banner {
+            background-color: var(--dm-yellow);
+            padding: 4rem 0;
+            position: relative;
+            overflow: hidden;
+            /* Pola Grid seperti di contoh */
+            background-image: 
+                linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        .banner-shape {
+            background-color: var(--dm-blue);
+            color: white;
+            padding: 1.5rem 3rem;
+            /* Bentuk miring/dinamis menggunakan clip-path */
+            clip-path: polygon(0 0, 100% 0, 97% 100%, 3% 100%); /* Bentuk miring */
+            text-align: center;
+        }
+
+        .banner-shape h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 4.5rem;
+            letter-spacing: 2px; /* Spasi huruf */
+            color: var(--dm-yellow);
+            margin: 0;
+            /* Efek outline putih pada teks */
+            text-shadow: 
+                -2px -2px 0 var(--dm-blue),  
+                 2px -2px 0 var(--dm-blue),
+                -2px  2px 0 var(--dm-blue),
+                 2px  2px 0 var(--dm-blue),
+                 -3px 0 0 white,
+                 3px 0 0 white,
+                 0 -3px 0 white,
+                 0 3px 0 white;
+        }
+
+        .page-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.5rem;
+            color: var(--dm-blue);
+            text-align: center;
+            margin-bottom: 2rem;
+            letter-spacing: 1px; /* Spasi huruf */
+        }
+
+        /* --- Gaya untuk setiap bagian (section) --- */
+        .section-title {
+            color: var(--dm-dark-blue);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 2.5rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 70px;
+            height: 4px;
+            background-color: var(--dm-yellow);
+            margin: 10px auto 0;
+        }
+
+        /* --- Bagian Alur Pendaftaran --- */
+        .step-card {
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .step-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .step-card-yellow {
+            background-color: var(--dm-yellow);
+            color: var(--dm-text-dark);
+        }
+
+        .step-card-blue {
+            background-color: var(--dm-dark-blue);
+            color: var(--dm-text-light);
+        }
+        
+        .step-card .step-number {
+            background-color: var(--dm-text-light);
+            color: var(--dm-dark-blue);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin: 0 auto 1rem;
+            border: 2px solid var(--dm-dark-blue);
+        }
+
+        .step-card-blue .step-number {
+            background-color: var(--dm-yellow);
+            border-color: var(--dm-yellow);
+        }
+        
+        .step-card img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 1rem;
+        }
+
+        .step-card h5 {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .step-card p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* --- Bagian Ketentuan --- */
+        .ketentuan-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .ketentuan-list li {
+            background-color: #fff;
+            padding: 1rem 1.5rem;
+            margin-bottom: 0.75rem;
+            border-left: 5px solid var(--dm-yellow);
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        /* --- Bagian Formulir --- */
+        .form-container {
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        
+        .form-label {
+            font-weight: 600;
+            color: var(--dm-text-dark);
+        }
+        
+        .btn-submit {
+            background-color: var(--dm-dark-blue);
+            color: var(--dm-text-light);
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            border: none;
+        }
+        
+        .btn-submit:hover {
+            background-color: #2c4e91; /* Sedikit lebih terang dari biru tua */
+            color: var(--dm-text-light);
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .banner-shape h1 {
+                font-size: 2.5rem;
+                text-shadow: 
+                    -1px -1px 0 var(--dm-blue),  
+                     1px -1px 0 var(--dm-blue),
+                    -1px  1px 0 var(--dm-blue),
+                     1px  1px 0 var(--dm-blue),
+                     -2px 0 0 white,
+                     2px 0 0 white,
+                     0 -2px 0 white,
+                     0 2px 0 white;
+            }
+            .banner-shape {
+                padding: 1rem 1.5rem;
+                clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
+            }
+            .section-title {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <!-- container-fluid : untuk membuat kontainer yang mengisi seluruh lebar layar -->
+        <div class="container-fluid" style="max-width: 80%; margin:auto;">
+            <!-- navbar-brand : untuk menampilkan nama atau logo dari website -->
+            <a class="navbar-brand d-flex align-items-center" href="home.html">
+                <img src="public/img/logo-dm.png" alt="Logo Dharma Mulya" width="50" height="50" class="me-2">
+                <p class="fw-bold mb-0 custom-weight">DHARMA MULYA CHRISTIAN SCHOOL</p>
+            </a>
+            <!-- navbar-toggler : untuk membuat tombol yang dapat digunakan untuk mengubah tampilan navbar pada layar kecil (humberger menu)-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- collapse navbar-collapse : untuk mengatur elemen-elemen di dalam navbar agar dapat disembunyikan pada layar kecil -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <!-- navbar-nav : untuk membuat daftar navigasi di dalam navbar -->
+                <ul class="navbar-nav gap-2">
+                    <li class="nav-item">
+                        <a class="nav-link custom-hover-success fw-bold" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-hover-success fw-bold" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-hover-success fw-bold" href="facility.html">Facility</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active custom-hover-success fw-bold" href="register.html">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-banner">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div class="banner-shape">
+                        <h1>PENDAFTARAN PESERTA DIDIK BARU</h1>
+                        <p class="lead mb-0">SMA Kristen Dharma Mulya Surabaya</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container" style="max-width: 80%;">
+
+        <!-- 1. ALUR PENDAFTARAN -->
+        <section id="alur" class="my-5">
+            <h2 class="section-title">Alur Pendaftaran</h2>
+            <div class="row g-4">
+                
+                <!-- Step 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="step-card step-card-yellow">
+                        <div class="step-number">1</div>
+                         <i class="bi bi-person-lines-fill" style="font-size:35px;"></i>
+                        <h5>Menghubungi Dharma Mulya</h5>
+                        <p>Via Website: www.dm.sch.id atau Via WhatsApp/Telepon: +62 822-5725-7022</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="step-card step-card-blue">
+                        <div class="step-number">2</div>
+                        <i class="bi bi-file-earmark-text-fill" style="font-size:35px;"></i>
+                        <h5>Membeli Formulir</h5>
+                        <p>Pembelian & pengisian formulir bisa online atau langsung di sekolah. Dikembalikan dalam 3 hari kerja.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="step-card step-card-yellow">
+                        <div class="step-number">3</div>
+                        <i class="bi bi-people-fill" style="font-size:35px;"></i>
+                        <h5>Wawancara Online</h5>
+                        <p>Wawancara Kepala Sekolah dengan Orang Tua dan calon siswa/siswi melalui video call (30-45 menit).</p>
+                    </div>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="step-card step-card-blue">
+                        <div class="step-number">4</div>
+                        <i class="bi bi-cash-coin" style="font-size:35px;"></i>
+                        <h5>Pembayaran DP</h5>
+                        <p>Setelah diterima, wajib melunasi DP & SPP bulan Juli. Pelunasan Uang Pembangunan maksimal 5 bulan.</p>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="step-card step-card-yellow">
+                        <div class="step-number">5</div>
+                        <i class="bi bi-credit-card" style="font-size:35px;"></i>
+                        <h5>Pembukaan Rekening</h5>
+                        <p>Biaya buka rekening siswa hanya Rp 20.000.</p>
+                    </div>
+                </div>
+
+                <!-- Step 6 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="step-card step-card-blue">
+                        <div class="step-number">6</div>
+                        <i class="bi bi-person-standing" style="font-size:35px;"></i>
+                        <h5>Pengukuran Seragam</h5>
+                        <p>Pembagian seragam akan dilakukan sebelum proses belajar mengajar dimulai.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 2. KETENTUAN PENDAFTARAN -->
+        <section id="ketentuan" class="my-5 py-4">
+            <h2 class="section-title">Ketentuan Umum</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <ul class="ketentuan-list">
+                        <li>Calon siswa telah menyelesaikan pendidikan jenjang SMA/sederajat.</li>
+                        <li>Mengisi formulir pendaftaran dengan data yang benar dan valid.</li>
+                        <li>Menyerahkan fotokopi Akta Kelahiran dan Kartu Keluarga (masing-masing 2 lembar).</li>
+                        <li>Menyerahkan fotokopi ijazah dan SKHUN SMA yang telah dilegalisir (bisa menyusul).</li>
+                        <li>Menyerahkan pas foto berwarna ukuran 3x4 (2 lembar).</li>
+                        <li>Mengikuti seluruh alur pendaftaran yang telah ditetapkan oleh sekolah.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. FORMULIR PENDAFTARAN -->
+        <section id="form-pendaftaran" class="my-5 py-4">
+            <h2 class="section-title">Formulir Pendaftaran Online</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="form-container">
+                        <!-- Tag <form> penting untuk menampung semua input.
+                             Atribut 'action' adalah alamat server tujuan data dikirim.
+                             Atribut 'method' adalah cara data dikirim (POST lebih aman untuk form).
+                             Untuk tujuan belajar, kita bisa kosongkan dulu. -->
+                        <form action="#" method="POST">
+                            
+                            <div class="mb-3">
+                                <label for="namaLengkap" class="form-label">Nama Lengkap Siswa</label>
+                                <input type="text" class="form-control" id="namaLengkap" placeholder="Masukkan nama lengkap" required>
+                            </div>
+                            
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="tempatLahir" class="form-label">Tempat Lahir</label>
+                                    <input type="text" class="form-control" id="tempatLahir" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="tanggalLahir" class="form-label">Tanggal Lahir</label>
+                                    <input type="date" class="form-control" id="tanggalLahir" required>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label class="form-label">Jenis Kelamin</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="jenisKelamin" id="lakiLaki" value="Laki-laki" checked>
+                                    <label class="form-check-label" for="lakiLaki">Laki-laki</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="jenisKelamin" id="perempuan" value="Perempuan">
+                                    <label class="form-check-label" for="perempuan">Perempuan</label>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="asalSekolah" class="form-label">Asal Sekolah (SMP)</label>
+                                <input type="text" class="form-control" id="asalSekolah" placeholder="Contoh: SMP Negeri 1 Surabaya" required>
+                            </div>
+                            
+                             <hr class="my-4">
+                             <h5 class="mb-3">Data Orang Tua / Wali</h5>
+
+                            <div class="mb-3">
+                                <label for="namaOrtu" class="form-label">Nama Orang Tua / Wali</label>
+                                <input type="text" class="form-control" id="namaOrtu" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="nomorWA" class="form-label">Nomor WhatsApp Aktif</label>
+                                <input type="tel" class="form-control" id="nomorWA" placeholder="Contoh: 08123456789" required>
+                            </div>
+                            
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-submit btn-lg">KIRIM PENDAFTARAN</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- AREA FOOTER -->
+    <footer class="site-footer">
+        <div class="container" style="max-width: 80%;">
+            <div class="row">
+
+                <!-- Kolom Kiri: Informasi Pendaftaran -->
+                <div class="col-lg-6 col-md-12 mb-4 mb-lg-0 footer-info">
+                    <h5>STUDENT ENROLLMENT</h5>
+                    <p>
+                        <a href="home.html" class="footer-info-link">Click here for more information</a>
+                    </p>
+                    <p class="mt-4">
+                        info@dm.sch.id
+                    </p>
+                    <p>
+                        <i class="bi bi-whatsapp me-2"></i>082257257022
+                    </p>
+                </div>
+
+                <!-- Kolom Kanan: Ikon Sosial Media -->
+                <div class="col-lg-6 col-md-12 text-lg-end footer-social-icons">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item">
+                            <a href="#"><i class="bi bi-facebook"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#"><i class="bi bi-instagram"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#"><i class="bi bi-youtube"></i></a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Baris Bawah: Copyright -->
+            <div class="row">
+                <div class="col-12 text-start footer-copyright">
+                    © 2025 Dharma Mulya Christian School. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- END AREA FOOTER -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+</html>

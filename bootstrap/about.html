@@ -4,8 +4,417 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <!-- CDN BOOTSTRAP 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Link ke Bootstrap Icons (Untuk ikon Visi & Misi) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style-header-footer.css">
+
+    <!-- Custom CSS -->
+    <style>
+        /* Variabel Warna Sesuai Desain */
+        :root {
+            --dm-blue: #293B8E;
+            --dm-yellow: #FFDD57;
+            --dm-pink: #F8C0CE;
+            --dm-red: #EF4B4B;
+            --dm-cyan: #46D3E2;
+            --dm-light-yellow: #E0E37F;
+            --dm-text-dark: #333;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        /* --- Hero Banner Section --- */
+        .hero-banner {
+            background-color: var(--dm-yellow);
+            padding: 4rem 0;
+            position: relative;
+            overflow: hidden;
+            /* Pola Grid seperti di contoh */
+            background-image: 
+                linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        .banner-shape {
+            background-color: var(--dm-blue);
+            color: white;
+            padding: 1.5rem 3rem;
+            /* Bentuk miring/dinamis menggunakan clip-path */
+            clip-path: polygon(0 0, 100% 0, 97% 100%, 3% 100%); /* Bentuk miring */
+            text-align: center;
+        }
+
+        .banner-shape h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 4.5rem;
+            letter-spacing: 2px; /* Spasi huruf */
+            color: var(--dm-yellow);
+            margin: 0;
+            /* Efek outline putih pada teks */
+            text-shadow: 
+                -2px -2px 0 var(--dm-blue),  
+                 2px -2px 0 var(--dm-blue),
+                -2px  2px 0 var(--dm-blue),
+                 2px  2px 0 var(--dm-blue),
+                 -3px 0 0 white,
+                 3px 0 0 white,
+                 0 -3px 0 white,
+                 0 3px 0 white;
+        }
+
+        .page-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.5rem;
+            color: var(--dm-blue);
+            text-align: center;
+            margin-bottom: 2rem;
+            letter-spacing: 1px; /* Spasi huruf */
+        }
+
+        /* --- Content Section --- */
+        .content-section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            font-family: 'Bebas Neue', sans-serif;
+            color: var(--dm-blue);
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px; /* Spasi huruf */
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 5px;
+            background-color: var(--dm-yellow);
+            margin-top: 8px;
+        }
+        
+        /* --- Card dengan Border dan Grid --- */
+        .dm-card-frame {
+            padding: 1rem;
+            border-radius: 8px;
+            background-size: 20px 20px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .dm-card-frame.pink {
+            background-color: var(--dm-pink);
+            border: 2px solid darken(var(--dm-pink), 10%);
+             background-image: 
+                linear-gradient(rgba(255,255,255,0.4) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.4) 1px, transparent 1px);
+        }
+
+        .dm-card-frame.cyan {
+            background-color: var(--dm-cyan);
+            border: 2px solid darken(var(--dm-cyan), 10%);
+            background-image: 
+                linear-gradient(rgba(255,255,255,0.4) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.4) 1px, transparent 1px);
+        }
+
+        .dm-card-frame img {
+            width: 100%;
+            border-radius: 4px;
+        }
+
+        /* --- Hymne Section --- */
+        .hymne-lyrics {
+            background-color: #fff;
+            border-left: 5px solid var(--dm-blue);
+            padding: 2rem;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        
+        .hymne-lyrics p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            font-style: italic;
+        }
+
+        /* --- Semboyan 4G Section --- */
+        .semboyan-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            border-top: 8px solid;
+        }
+
+        .semboyan-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .semboyan-card.grow { border-color: var(--dm-blue); }
+        .semboyan-card.glow { border-color: var(--dm-light-yellow); }
+        .semboyan-card.give { border-color: var(--dm-cyan); }
+        .semboyan-card.great { border-color: var(--dm-red); }
+
+        .semboyan-card .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .semboyan-card.grow .icon { color: var(--dm-blue); }
+        .semboyan-card.glow .icon { color: var(--dm-light-yellow); }
+        .semboyan-card.give .icon { color: var(--dm-cyan); }
+        .semboyan-card.great .icon { color: var(--dm-red); }
+
+        .semboyan-card h4 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2rem;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .banner-shape h1 {
+                font-size: 2.5rem;
+                text-shadow: 
+                    -1px -1px 0 var(--dm-blue),  
+                     1px -1px 0 var(--dm-blue),
+                    -1px  1px 0 var(--dm-blue),
+                     1px  1px 0 var(--dm-blue),
+                     -2px 0 0 white,
+                     2px 0 0 white,
+                     0 -2px 0 white,
+                     0 2px 0 white;
+            }
+            .banner-shape {
+                padding: 1rem 1.5rem;
+                clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
+            }
+            .section-title {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>halo World</h1>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <!-- container-fluid : untuk membuat kontainer yang mengisi seluruh lebar layar -->
+        <div class="container-fluid" style="max-width: 80%; margin:auto;">
+            <!-- navbar-brand : untuk menampilkan nama atau logo dari website -->
+            <a class="navbar-brand d-flex align-items-center" href="home.html">
+                <img src="public/img/logo-dm.png" alt="Logo Dharma Mulya" width="50" height="50" class="me-2">
+                <p class="fw-bold mb-0 custom-weight">DHARMA MULYA CHRISTIAN SCHOOL</p>
+            </a>
+            <!-- navbar-toggler : untuk membuat tombol yang dapat digunakan untuk mengubah tampilan navbar pada layar kecil (humberger menu)-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- collapse navbar-collapse : untuk mengatur elemen-elemen di dalam navbar agar dapat disembunyikan pada layar kecil -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <!-- navbar-nav : untuk membuat daftar navigasi di dalam navbar -->
+                <ul class="navbar-nav gap-2">
+                    <li class="nav-item">
+                        <a class="nav-link custom-hover-success fw-bold" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active custom-hover-success fw-bold" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-hover-success fw-bold" href="facility.html">Facility</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-hover-success fw-bold" href="register.html">Register</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Register</a>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. Header Banner -->
+    <header class="hero-banner">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div class="banner-shape">
+                        <h1>TENTANG KAMI</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. Main Content -->
+    <main class="content-section">
+        <div class="container">
+
+            <h2 class="page-title">SMA DHARMA MULYA SURABAYA</h2>
+
+            <!-- Sejarah Section -->
+            <section id="sejarah" class="mb-5 pb-4">
+                <h3 class="section-title">Sejarah Sekolah</h3>
+                <div class="row align-items-center">
+                    <div class="col-lg-7">
+                        <p>SMA Dharma Mulya Surabaya berdiri pada tahun 1985 dengan visi untuk menjadi lembaga pendidikan Kristen yang unggul dalam iman, ilmu, dan pelayanan. Berawal dari sebuah bangunan sederhana, sekolah ini tumbuh dan berkembang berkat dedikasi para pendiri dan dukungan penuh dari komunitas.</p>
+                        <p>Dengan komitmen untuk membentuk generasi yang tidak hanya cerdas secara akademis tetapi juga berkarakter mulia, kami terus berinovasi dalam kurikulum dan fasilitas. Kini, SMA Dharma Mulya dikenal sebagai salah satu sekolah terdepan di Surabaya yang menghasilkan lulusan-lulusan berprestasi dan siap menghadapi tantangan global.</p>
+                        <p>Perjalanan kami adalah bukti nyata dari penyertaan Tuhan dan kerja keras seluruh civitas academica. Kami percaya bahwa setiap siswa adalah pribadi unik yang berharga, dan tugas kami adalah membantu mereka menemukan dan mengembangkan potensi terbaiknya.</p>
+                    </div>
+                    <div class="col-lg-5">
+                        <!-- Card dengan gaya dari gambar referensi -->
+                        <div class="dm-card-frame pink">
+                            <img src="public/img/gedung-dm.png" alt="Gedung Lama Dharma Mulya" class="img-fluid shadow">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <hr class="my-5">
+
+            <!-- Hymne Section -->
+            <section id="hymne" class="mb-5 pb-4">
+                 <h3 class="section-title">Hymne Dharma Mulya</h3>
+                 <div class="row">
+                     <div class="col-lg-6">
+                         <div class="dm-card-frame cyan">
+                             <img src="public/img/activity-dm.png" alt="Siswa-siswi Dharma Mulya" class="img-fluid shadow">
+                         </div>
+                     </div>
+                     <div class="col-lg-6">
+                        <div class="hymne-lyrics">
+                            <p>
+                                Dharma Mulya sekolah kami<br>
+                                Tempat kami menimba ilmu<br>
+                                Berlandaskan kasih ilahi<br>
+                                Menuju masa depan cerah.
+                            </p>
+                            <p>
+                                Dengan iman, hati, dan tangan<br>
+                                Kami berkarya bagi bangsa<br>
+                                Menjadi terang dan harapan<br>
+                                Jayalah s'lalu Dharma Mulya.
+                            </p>
+                        </div>
+                     </div>
+                 </div>
+            </section>
+
+            <hr class="my-5">
+
+            <!-- Semboyan 4G Section -->
+            <section id="semboyan" class="mb-5">
+                <h3 class="section-title">Semboyan 4G Dharma Mulya</h3>
+                <p class="lead mb-5">Semboyan 4G adalah pilar yang menopang seluruh kegiatan pendidikan dan pembentukan karakter di Dharma Mulya, yaitu Grow, Glow, Give, and Great.</p>
+                
+                <div class="row g-4">
+                    <!-- Card 1: GROW -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="semboyan-card grow">
+                            <div class="icon">🌱</div>
+                            <h4>GROW</h4>
+                            <p>Terus bertumbuh dalam pengetahuan, iman, dan karakter untuk mencapai potensi maksimal yang Tuhan berikan.</p>
+                        </div>
+                    </div>
+                    <!-- Card 2: GLOW -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="semboyan-card glow">
+                             <div class="icon">✨</div>
+                            <h4>GLOW</h4>
+                            <p>Memancarkan cahaya kebaikan, integritas, dan menjadi teladan positif di tengah masyarakat.</p>
+                        </div>
+                    </div>
+                    <!-- Card 3: GIVE -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="semboyan-card give">
+                            <div class="icon">❤️</div>
+                            <h4>GIVE</h4>
+                            <p>Memberi dengan tulus, melayani sesama, dan berkontribusi secara aktif bagi lingkungan sekitar.</p>
+                        </div>
+                    </div>
+                    <!-- Card 4: GREAT -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="semboyan-card great">
+                            <div class="icon">🏆</div>
+                            <h4>GREAT</h4>
+                            <p>Berusaha mencapai keunggulan dalam segala bidang untuk memuliakan Tuhan dan menjadi berkat bagi dunia.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- AREA FOOTER -->
+    <footer class="site-footer">
+        <div class="container" style="max-width: 80%;">
+            <div class="row">
+
+                <!-- Kolom Kiri: Informasi Pendaftaran -->
+                <div class="col-lg-6 col-md-12 mb-4 mb-lg-0 footer-info">
+                    <h5>STUDENT ENROLLMENT</h5>
+                    <p>
+                        <a href="home.html" class="footer-info-link">Click here for more information</a>
+                    </p>
+                    <p class="mt-4">
+                        info@dm.sch.id
+                    </p>
+                    <p>
+                        <i class="bi bi-whatsapp me-2"></i>082257257022
+                    </p>
+                </div>
+
+                <!-- Kolom Kanan: Ikon Sosial Media -->
+                <div class="col-lg-6 col-md-12 text-lg-end footer-social-icons">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item">
+                            <a href="#"><i class="bi bi-facebook"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#"><i class="bi bi-instagram"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#"><i class="bi bi-youtube"></i></a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Baris Bawah: Copyright -->
+            <div class="row">
+                <div class="col-12 text-start footer-copyright">
+                    © 2025 Dharma Mulya Christian School. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- END AREA FOOTER -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </body>
 </html>

@@ -2,6 +2,7 @@
 .custom-hover-success:hover {
     color: #198754 !important;
     font-weight: bold;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* ======================================================= */
@@ -55,7 +56,7 @@
     }
 
     .custom-weight {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
 }
 
